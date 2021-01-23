@@ -14,9 +14,12 @@ $("#currentDay").append(rightNow);
 var workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
 for (let i = 0; i < workHoursArr.length; i++){
-    var createDiv = $("<tr>");
+    // create the rows in table format
+    var createDiv = $("<tr>").prepend();
+    //append the rows to the parent container
     let newRow = $(".container").append(createDiv);
+    //give each row a time-block class for formatting purposes
     $(newRow[i]).addClass("time-block");
-    $("tr").text(workHoursArr[i]);
+  
     
 }
