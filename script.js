@@ -15,11 +15,12 @@ var workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "
 
 for (let i = 0; i < workHoursArr.length; i++){
     // create the rows in table format
-    var createDiv = $("<tr>").prepend();
+    var createDiv = $("<tr>").prepend(workHoursArr[i]);
     //append the rows to the parent container
     let newRow = $(".container").append(createDiv);
     //give each row a time-block class for formatting purposes
     $(newRow[i]).addClass("time-block");
+    $("tr").addClass("past");
   
     
 }
