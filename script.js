@@ -10,18 +10,44 @@ $("#currentDay").append(rightNow);
 var workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
 
-$(".container").append("<div class='row'></div>");
-// $(".row").appendTotext("I am a time block");
-$(".row").append("<div class='hour'><I the hour block/div>");
-$(".row").append("<textarea class='description'> I am the text area </textarea>");
-$(".row").append("<div class='saveBtn'> I am the save button </div>");
+// $(".container").append("<div class='row'></div>");
+// var createRow = $("<div class='row'></div>")
+// $(".row").append("<div class='hour'><I the hour block/div>");
+// $(".row").append("<textarea class='description'> I am the text area </textarea>");
+// $(".row").append("<div class='saveBtn'> I am the save button </div>");
+
+// $(".row").appendTo(".container");
 
 // for (let i = 0; i < workHoursArr.length; i++){
 //     // create the rows in table format
-//     var createDiv = $("<textarea>").prepend(workHoursArr[i]);
-//     //append the rows to the parent container
-//     let newRow = $(".container").append(createDiv);
-//     //give each row a time-block class for formatting purposes
-//     $(newRow[i]).addClass("time-block");
-      
+//     $(".container").append("<div class='row'></div>");
+//     // $(".row").append("<div class='hour'><I the hour block/div>");
+//     // $(".row").append("<textarea class='description'> I am the text area </textarea>");
+//     // $(".row").append("<div class='saveBtn'> I am the save button </div>");   
 // }
+// for (let i = 0; i < workHoursArr.length; i++){
+//     // create the rows in table format
+//     // $(".container").append("<div class='row'></div>");
+//     $(".row").append("<div class='hour'><I the hour block/div>");
+//     // $(".row").append("<textarea class='description'> I am the text area </textarea>");
+//     // $(".row").append("<div class='saveBtn'> I am the save button </div>");   
+// }
+
+// var row = $("<div class='row'></div>");
+
+// var time = $("<div class='hour'></div>");
+// var textarea = $("<textarea class='description'></textarea>");
+// var saveBtn = $("<button class='saveBtn'>Save</button>");
+
+// row.append(time);
+// row.append(textarea);
+// row.append(saveBtn);
+
+
+var time = $("<div class='hour'>I am time</div>");
+var textarea = $("<textarea class='description'></textarea>");
+var saveBtn = $("<button class='saveBtn'>Save</button>");
+row.append(time);
+row.append(textarea);
+row.append(saveBtn);
+$(".container").append("<div class='row'></div>");
