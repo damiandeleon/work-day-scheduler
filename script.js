@@ -10,11 +10,20 @@ $("#currentDay").append(rightNow);
 var workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
 
-var row = $("<div class='row'></div>");
-var time = $("<div class='hour col-1'>I am time</div>");
-var textarea = $("<textarea class='description col-10'></textarea>");
-var saveBtn = $("<button class='saveBtn col-1'>Save</button>");
-row.append(time);
-row.append(textarea);
-row.append(saveBtn);
-$(".container").append(row);
+$(".container").attr("style", "time-block");
+//create blocks of time slots 
+for(var i = 0; i < workHoursArr.length; i++){
+    //create the row and time-block div
+    var row = $("<div class='row'></div>");
+    //create the time div
+    var time = $("<div class='hour col-1'></div>").append(workHoursArr[i]);
+     // create the textarea div
+    var textarea = $("<textarea class='description col-10'></textarea>");
+    //create the save Btn div
+    var saveBtn = $("<button class='saveBtn col-1'>Save</button>");
+    //append each item to the row 
+    row.append(time);
+    row.append(textarea);
+    row.append(saveBtn);
+    $(".container").append(row);
+}
