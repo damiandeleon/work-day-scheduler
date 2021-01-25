@@ -41,28 +41,42 @@ var timeValCount = 9;
 //loop through the militaryTime array and assign each indix as a value to the timeEl tags
 $('.hourOfDay').each(function () {
     $(this).attr("value", timeValCount);
-
-    if ((this)<hour){
-        $(textareaEl).attr("class", "description col-10 future");
-    } else if 
-    ((this)==hour){
-        $(textareaEl).attr("class", "description col-10 present");
-    } else {
-        $(textareaEl).attr("class", "description col-10 past");
-    }
     timeValCount = timeValCount + 1;
-
 });
-
-
-console.log(hour);
-
-console.log(hour);
 
     //use if statement to set the timeblocks backgrounds to change depending on the chornological relatinoship each block is to the current time (past, current, future)
 
-    //loop throuch each timeEl div and access it's value
-
+    
+console.log($("time"));
+//loop throuch each timeEl div and access it's value
+function chronoShader (){
+    for (let i = 0; i< 9; i++){
+        if($(".hourOfDay").val() < hour) {
+            $(textareaEl).attr("class", "description col-10 past");
+            } else if (
+            $(".hourOfDay").val() > hour) {
+                $(textareaEl).attr("class", "description col-10 future");
+                } else if (
+                $(".hourOfDay").val() == hour) {
+                    $(textareaEl).attr("class", "description col-10 present");
+                    } 
+    }
+}
+chronoShader();
+    // $("time").each(function () {
+       
+        
+    // });
+        
+    //     if ($(time).value < hour){
+    //     $(textareaEl).attr("class", "description col-10 future");
+    // } else if 
+    // (.value == hour){
+    //     $(textareaEl).attr("class", "description col-10 present");
+    // } else {
+    //     $(textareaEl).attr("class", "description col-10 past");
+    // }
+   
 
 
 
