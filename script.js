@@ -15,7 +15,7 @@ $("#currentDay").append(rightNow);
 
 
 var workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-var militaryTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+
 
 $(".container").attr("style", "time-block");
 timeValCount = 8;
@@ -24,7 +24,7 @@ for(var i = 0; i < workHoursArr.length; i++){
     //create the row and time-block div
     var rowEl = $("<div class='row'></div>");
     //create the time div
-    var timeEl = $("<time class='hour col-1' id='hourOfDay'></time>").append(workHoursArr[i]);
+    var timeEl = $("<time class='hour col-1 hourOfDay'></time>").append(workHoursArr[i]);
      // create the textarea div
     var textareaEl = $("<textarea class='description col-10'></textarea>");
     //create the save Btn div
@@ -36,14 +36,12 @@ for(var i = 0; i < workHoursArr.length; i++){
     $(".container").append(rowEl);
     
 }
-
-//create a military time string
-
-//loop through the militaryTime array and assign each indix as a value to the timeEl tags
-$('#hourOfDay').each(function(index){
-    //do stuff
-    console.log(index);
-  });
+    var timeValCount = 9;
+    //loop through the militaryTime array and assign each indix as a value to the timeEl tags
+    $('.hourOfDay').each(function(){
+        $(this).attr("value", timeValCount);
+        timeValCount = timeValCount + 1;
+    });
 
 //find code to tell the date and time right now 
 // console.log(year, month, date, hour);
