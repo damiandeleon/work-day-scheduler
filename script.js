@@ -52,7 +52,7 @@ $(document).ready(function () {
             //create the row and time-block div
             var rowEl = $("<div class='row'></div>");
             //create the time div
-            var timeEl = $("<div class='hour col-1 hourOfDay'></div>").append(workHoursArr[i]);
+            var timeEl = $("<div class='hour col-1 hourOfDay' style = 'padding-top: 18px'></div>").append(workHoursArr[i]);
             timeEl.attr("value", i + 9);
             // create the textarea div
             var textareaEl = $("<textarea class='description col-10'></textarea>");
