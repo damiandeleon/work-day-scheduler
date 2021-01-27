@@ -11,6 +11,7 @@ $(document).ready(function () {
     var hour = current.getHours();
     var timeTag = $("time");
     var saveBtn = $("button");
+    var deleteBtn = $("button")
     textDescription = $(".description");
 
 
@@ -20,10 +21,10 @@ $(document).ready(function () {
 
     //create timeblocks inside the div container
 
-
+    //define work hours arary to loop through for row text assignment
     var workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
-
+    
     $(".container").attr("style", "time-block");
 
 
@@ -35,14 +36,14 @@ $(document).ready(function () {
             //use if statement to set the timeblocks backgrounds to change depending on the chornological relatinoship each block is to the current time (past, current, future)
 
             if (element.attr('value') < hour) {
-                $(textareaEl).attr("class", "description col-10 past");
+                $(textareaEl).attr("class", "description col-9 past");
             } else if (
                 element.attr('value') > hour) {
-                $(textareaEl).attr("class", "description col-10 future");
+                $(textareaEl).attr("class", "description col-9 future");
             }
             else if (
                 element.attr('value') == hour) {
-                $(textareaEl).attr("class", "description col-10 present");
+                $(textareaEl).attr("class", "description col-9 present");
             }
         }
 
@@ -55,16 +56,18 @@ $(document).ready(function () {
             var timeEl = $("<div class='hour col-1 hourOfDay' style = 'padding-top: 18px'></div>").append(workHoursArr[i]);
             timeEl.attr("value", i + 9);
             // create the textarea div
-            var textareaEl = $("<textarea class='description col-10'></textarea>");
+            var textareaEl = $("<textarea class='description col-9'></textarea>");
             textareaEl.attr('id', i + 9);
             styleElement(timeEl)
             //create the save Btn div
-            var saveBtnEl = $("<button class='saveBtn col-1 fa fa-save'></button>");
+            var saveBtnEl = $("<button class='saveBtn col-1 far fa-save'></button>");
+            var deleteBtnEl = $("<button class ='deleteMe col-1 far fa-trash-alt'></button>");
             saveBtnEl.attr('id', "sb" + (i + 9));
             //append each item to the row 
             rowEl.append(timeEl);
             rowEl.append(textareaEl);
             rowEl.append(saveBtnEl);
+            rowEl.append(deleteBtnEl);
             $(".container").append(rowEl);
 
         }
@@ -110,15 +113,21 @@ $(document).ready(function () {
         $("#17").text(eventDetails9)
     }
 
-
+    //create a onclick event using jQuery to issue a function to save the information in the text area
 
     $('.saveBtn').on("click", function (event) {
         event.preventDefault();
 
         localStorage.setItem($(this).prev().attr('id'), $(this).prev().val());
-        //     renderDetials();
+  
     });
+
+    $('.deleteMe').on("click", function (event) {
+        event.preventDefault();
+       localStorage.removeItem($(this).prev().prev().attr('id'));
+       renderblocks();
+    })
 });
-    //create a onclick event using jQuery to issue a function to save the information in the text area
+
 
 
