@@ -125,7 +125,7 @@ $(document).ready(function () {
     $('.deleteMe').on("click", function (event) {
         event.preventDefault();
        localStorage.removeItem($(this).prev().prev().attr('id'));
-       renderblocks();
+       location.reload();
     })
 });
 
