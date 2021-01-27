@@ -56,15 +56,14 @@ $(document).ready(function () {
             timeEl.attr("value", i + 9);
             // create the textarea div
             var textareaEl = $("<textarea class='description col-10'></textarea>");
+            textareaEl.attr('id', i + 9);
             styleElement(timeEl)
-            var inputEl = $("<input type = 'text' name= 'details' >");
-            inputEl.attr('id', i + 9);
             //create the save Btn div
             var saveBtnEl = $("<button class='saveBtn col-1 fa fa-save'></button>");
+            saveBtnEl.attr('id', "sb" + (i + 9));
             //append each item to the row 
             rowEl.append(timeEl);
             rowEl.append(textareaEl);
-            textareaEl.append(inputEl);
             rowEl.append(saveBtnEl);
             $(".container").append(rowEl);
 
@@ -80,21 +79,43 @@ $(document).ready(function () {
     //build in local storage save feature inside the saveBtn div
 
     function renderDetails() {
-        var eventDetails = localStorage.getItem("id");
+        var eventDetails1 = localStorage.getItem($("#sb9").prev().attr('id'));
 
-        if (!eventDetails) {
-            return;
-        }
-        textDescription.textContent = eventDetails;
+        var eventDetails2 = localStorage.getItem($("#sb10").prev().attr('id'));
+
+        var eventDetails3 = localStorage.getItem($("#sb11").prev().attr('id'));
+
+        var eventDetails4 = localStorage.getItem($("#sb12").prev().attr('id'));
+
+        var eventDetails5 = localStorage.getItem($("#sb13").prev().attr('id'));
+
+        var eventDetails6 = localStorage.getItem($("#sb14").prev().attr('id'));
+
+        var eventDetails7 = localStorage.getItem($("#sb15").prev().attr('id'));
+
+        var eventDetails8 = localStorage.getItem($("#sb16").prev().attr('id'));
+
+        var eventDetails9 = localStorage.getItem($("#sb17").prev().attr('id'));
+
+
+
+        $("#9").text(eventDetails1)
+        $("#10").text(eventDetails2)
+        $("#11").text(eventDetails3)
+        $("#12").text(eventDetails4)
+        $("#13").text(eventDetails5)
+        $("#14").text(eventDetails6)
+        $("#15").text(eventDetails7)
+        $("#16").text(eventDetails8)
+        $("#17").text(eventDetails9)
     }
+
+
 
     $('.saveBtn').on("click", function (event) {
         event.preventDefault();
 
-        localStorage.setItem($(this).prev().children().attr('id'), $(this).prev().val());
-        // var details = document.querySelector("#details").value;
-
-        //     localStorage.setItem("details", details);
+        localStorage.setItem($(this).prev().attr('id'), $(this).prev().val());
         //     renderDetials();
     });
 });
