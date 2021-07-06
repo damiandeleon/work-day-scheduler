@@ -1,6 +1,9 @@
 # work-day-scheduler
 This tool is used to keep a daily track of events schduled for a user.  
 
+## To Launch
+Click: [Launch Workday Scheduler](https://damiandeleon.github.io/work-day-scheduler/)
+
 ## Utility Structure
 ### Current Date
 On the top header, the user will see beneath the title of the page to find the urernt date and day of the week. 
@@ -29,8 +32,6 @@ On the far right side will be the delete button represented by a trash icon.  Th
 The page will dynamically shade between different color backgrounds to indicate to the user the choronigical relationship the timeslot has to the current time. If the event is in the past, the text area background will be gray.  If the event is within the current time slot, the background will be red.  If the event is in the future, the background will be green.
 ![ChroloEvents](https://user-images.githubusercontent.com/73486962/106021186-27896080-608a-11eb-96bb-266be7aefe3b.png)
 
-## To Launch
-Clone Repository.  Right click on the index.html file and launch in browser.
 
 ## Credits
 Header date and time display was used using moment.js, found at https://momentjs.com/
