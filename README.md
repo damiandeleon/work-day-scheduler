@@ -29,6 +29,9 @@ On the far right side will be the delete button represented by a trash icon.  Th
 The page will dynamically shade between different color backgrounds to indicate to the user the choronigical relationship the timeslot has to the current time. If the event is in the past, the text area background will be gray.  If the event is within the current time slot, the background will be red.  If the event is in the future, the background will be green.
 ![ChroloEvents](https://user-images.githubusercontent.com/73486962/106021186-27896080-608a-11eb-96bb-266be7aefe3b.png)
 
+## To Launch
+Clone Repository.  Right click on the index.html file and launch in browser.
+
 ## Credits
 Header date and time display was used using moment.js, found at https://momentjs.com/
 jquery.com was used for reference on the structure of methods.
