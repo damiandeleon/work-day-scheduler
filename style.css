@@ -1,7 +1,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
+  background: rgb(162,168,170);
+  background: linear-gradient(180deg, rgba(162,168,170,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 textarea{
@@ -15,14 +17,28 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background: rgb(248,199,173);
+  background: radial-gradient(circle, rgba(248,199,173,1) 0%, rgba(248,207,185,1) 46%, rgba(247,243,240,1) 100%);
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
 
+.col-1{
+  padding-left: unset;
+  padding-right: unset;
+}
+
 .description{
   white-space: pre-wrap;
+}
+
+.deleteMe{
+  background: rgb(255,88,88);
+  background: linear-gradient(106deg, rgba(255,88,88,1) 0%, rgba(221,155,155,1) 100%);
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .time-block{
@@ -32,14 +48,19 @@ textarea{
 
 .row {
   white-space: pre-wrap;
+  border-top: 1px solid white;
   height: 80px;
-  border-top: 1px solid white;;
+  flex-wrap: unset;
+  margin-left: unset;
+  margin-right: unset;
+  text-align: center;
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #f8cfb9;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding-left: unset;
 }
 
 .past {
@@ -59,9 +80,8 @@ textarea{
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background: rgb(6,174,213);
+  background: linear-gradient(90deg, rgba(6,174,213,1) 0%, rgba(146,191,201,1) 100%);
   color: white;
 }
 
