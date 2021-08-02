@@ -4,6 +4,10 @@ The user can use this as an online day planner.  Great for teaching kids how to 
 ## To Launch
 Click: [Launch Workday Scheduler](https://damiandeleon.github.io/work-day-scheduler/)
 
+## Tecnologies Used
+HTML, CSS, Boostrap, Google Fonts, Awesome Fonts, JavaScript, JQuery, MomentJS API
+
+
 # Layout
 ## Current Date
 On the top header, the user will see beneath the title of the page to find the current date and day of the week. 
@@ -38,4 +42,5 @@ The page will dynamically shade between different color backgrounds to indicate 
 
 ## Credits
 Header date and time display was used using moment.js, found at https://momentjs.com/
-jquery.com was used for reference on the structure of methods.
+
+JQuery, found at jquery.com was used for reference on the structure of methods.
