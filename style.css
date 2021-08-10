@@ -33,7 +33,7 @@ textarea{
   white-space: pre-wrap;
 }
 
-.deleteMe{
+.deleteBtn{
   background: rgb(255,88,88);
   background: linear-gradient(106deg, rgba(255,88,88,1) 0%, rgba(221,155,155,1) 100%);
   color: white;

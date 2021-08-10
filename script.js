@@ -16,7 +16,7 @@ $(document).ready(function () {
     var saveBtn = $("button");
     var deleteBtn = $("button")
     //set code for the current day using moment
-    var rightNow = moment().format("dddd, MMMM Do YYYY");
+    var rightNow = moment().format("dddd: MMMM Do YYYY");
 
     //append var "rightNow" to the element with the id of "currentDay"
     $("#currentDay").append(rightNow);
